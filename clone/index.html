@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="kr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="short icon" href="tarae.jpg" />
+    <title>Welcome to Kokoa Talk !</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <div class="status-bar">
+      <div class="status-bar__column">
+        <span>No Service</span>
+        <!-- WIFI Icon -->
+        <i class="fas fa-wifi"></i>
+      </div>
+      <div class="status-bar__column exam">
+        <span>18:43</span>
+      </div>
+      <div class="status-bar__column">
+        <span>80%</span>
+        <!-- Battery Icon -->
+        <i class="fas fa-battery-three-quarters"></i>
+        <!-- Lightning Icon -->
+        <i class="fas fa-bolt"></i>
+      </div>
+    </div>
+
+    <header class="Welcome-header">
+      <h2 class="Welcome-header__title">Welcome to Kakao Clone</h2>
+      <p class="Welcome-header__text">
+        If you have a Kakao Acount, log in with your email or phone number.
+      </p>
+    </header>
+
+    <form class="login-form">
+      <input
+        class="login-form__id"
+        type="text"
+        required
+        placeholder="Email or phone number"
+      />
+      <input
+        class="login-form__password"
+        type="password"
+        required
+        placeholder="Password"
+      />
+      <input class="login-form__button_login" type="submit" value="Log In" />
+      <input class="login-form__button_signup" type="submit" value="Sign Up" />
+      <a class="login-form__find_account" href="#">
+        Find Kokoa Account or Password
+      </a>
+    </form>
+
+    <script
+      src="https://kit.fontawesome.com/6478f529f2.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
