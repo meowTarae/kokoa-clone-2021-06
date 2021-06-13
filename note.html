@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="kr">
+    <head>
+        <meta charset="utf-8" />
+        <link
+            rel="short icon"
+            href="note.jpg"
+        />
+    </head>
+
+    <body>
+        <header>
+            <h1>건호가 공부한 것들을 필기하는 곳 !</h1>
+        </header>        
+
+        <main>
+            <div> <!-- -HTML 메모- --> 
+
+                명령어들은 html tags mdn에서 찾아보자.
+                바로 명령어 쓰고 탭 누르면 괄호랑 식 같은게 자동으로 나오는 것 같아
+
+                form이라는 것을 배웠어! 여러 type이 있어.
+                <form>으로 여닫은 후, <input type=" "  />로 사용하면 되.                          
+                타입 text나 password에는 placeholder=""로 빈칸에 글자를 넣을 수 있어. 
+                마지막에 type으로 date, email, range, checkbox.. 등등 여러가지로 변환 가능.
+
+                label for=""
+                input id=""    에서 "" 안의 값은 서로 같아야만 한다.
+
+                required나 minlength로 박스를 제어할 수 있고.
+                mark는 노란 형광펜 !
+                
+                <strong>은 bold와 같아</strong>
+                <audio controls  src="~~" >     </audio>
+                <video controls width="15"  src="" ></video>
+                
+                <div>는 칸을 나눠줘 </div>
+                <p>는 문단을 나눠주고.</p>
+                <span>은 짧은 문장을 쓸때</span>
+
+
+                <header>, <main>, <footer>은 div와 같지만 !sementic, 의미를 지니는 div라고 생각하면 되.</footer></main></header>
+
+
+            </div>
+
+            <div> <!-- CSS 메모 -->                
+                
+                HTMI와 CSS를 연동하는 방법.
+                    <head> 파일에                       
+                     1. </style> 입력해서 거기에 css코딩을 하면 된다.                     
+                     2. ~~.css파일을 만들어서 <link href="~~~.css" rel="stylesheet" /> 를 입력.
+
+                
+                block과 inline의 차이
+                 block은 옆에 아무것도 올 수 없다 <!-- ex) div -->
+                 inline (=in the same line)은 가능 <!-- ex) span, a(anchor), image. -->
+
+                display: inline or block; 로 변경 가능.
+
+                block은 높이와 너비가 있지만 inline은 그렇지 않다.
+                
+                block에는 3가지 특징이 있다.
+                        1. margin - border(경계)의 바깥에 있는 공간
+                           margin 값  1개 - allround
+                                      2개 - 상하, 좌우
+                                      3개 - 시계방향
+                        2. border - 
+                        3. padding -  
+
+                inline은 width, height에 margin을 가질 수 없다. padding은 가능
+                
+                물론 display: inline-block;로 변환 가능
+                 but, 반응형 디자인 지원x (모니터마다 해상도가 다름)
+                    -> Flex를 이용 ! + px말고 vh단위를 이용하자!
+                
+                flex~
+                 1. display: flex;
+                 2. parent element에게 명령 (= change to flex container)
+
+                 주축(main axis, 수평)과 교차축(cross axis, 수직)으로 이루어짐.
+
+                 주축 = justify-content: space-(start), (content), (between), (end), (evenly=고르게 분배)
+                 교차축 = align-items                                         
+
+                 flex-direction:column; -> 행/렬 변경
+
+
+            
+                class~
+                 id="tarae"     -> 중복 사용 불가, Only One
+                 class="cat tarae meow"  -> meow 또는 cat 또는 tarae로 호출 가능!
+                  호출 => .tarae  (Dot name)
+                
+                
+
+                  
+                position: fixed; -> 화면에 고정하기
+                 +) border에 다른 도형이 있다면, top,left 등으로 이동하면, 자유로워질 수 있음
+
+                position: relative; -> 위치 이동
+                 element가 처음 놓인 자리에서, top, bottom, left, right로 위치 이동 가능
+                
+                position: absolute; -> 기준을 부모 로 함. (div 말고 body같은거)
+                 대신 div에 position: relative;를 넣으면, 기준이 div가 됨. 
+
+
+
+                pseudo selector~
+                 div:first-child -> div의 첫번째를 선택
+                 div:last-child -> div의 마지막을 선택
+                 div:nth-child(2 / odd / even / 3n + 1) -> span의 2번째 or 홀 or 짝 or 1,4,7..을 선택
+                 div p  -> div 안의 모든 p
+                 div > p  -> div의 첫번째 자식이 p 일때
+                 div + p  -> div 바로 밑의 형제가 p 일때
+                 div ~ p  -> div 밑의 언제가에 있는 p에 적용
+                 input : required {}  -> 이 명령어가 있으면
+                 input [placeholder="First Name"] {}  -> First Name 만
+                 input [placeholder*="Name"] {}  -> Name 들어간 애들 다
+                 input [placeholder~="Name"] {}  -> (앞뒤에 공백이 있는 상태에서) Name 애들
+
+
+                 
+                 
+                state~
+                  1. button : active {}  -> 클릭 시 
+                  2.        : hover {}  -> 마우스를 올려놓을시
+                  3.        : focus {}  -> 현재 선택된 것을~
+                  4.        : focus-within {}  -> 부모에게 적용, child element가 focused 일때
+                  5.   a    : visited {}  -> 주소를~                        
+
+                  조건은 중복 가능!
+                  1, 2, 3은 부모에서 자식으로 사용 가능, 역 불가 ㄴ!
+
+                  6.        :: placeholder  -> :: 두개 넣어야 작동 되
+                  7.        :: selection  -> 드래그할때 색 변경
+                  8.        :: first-letter  -> 문단의 첫 글자만 변경해줌.                  
+                 
+                    
+
+                RGB(151,54,38) 로 컬러 선택 가능...
+                RGBA 로 마지막에 투명도까지 선택 가능  -> a 값이 0이면 투명, 100이면 다 나오는거겠지?
+                 (opacity 뜻 = 불투명)  
+
+
+
+                style에서 변수 선언 가능.
+                : root{
+                    --main-color: rgb(10,5,5);
+                    (변수명-바꿀거)
+                }
+
+                호출  -> var()
+                 ex) background-color = var(--main-color);
+                                        (var = variable = 변하기 쉬운)
+
+
+            <div> <!-- Advanced CSS -->                
+                
+                1. Transitions  
+                    -> 어떤 상태에서 다른 상태로의 "변화"를 애니메로~ (이동)
+
+                    state(hover, focus 등)를 활용할 때 사용.
+                    state말고 메인 element에 식을 작성해야 함. 그래야 조건 취소 시 효과가 돌아옴
+
+                    -> Transitions: all 1s https://matthewlein.com/tools/ceaser;
+                              어디를? 시간은? 효과는(보통 ease-in-out을 쓴다)? 
+                
+
+                2. Transformations  -> form 변환 (형태), 다른 box의 요소를 무시함.
+                
+                    transform: translate(70px, -70px);
+                                         좌우,  상하
+
+                
+                3. 애니메이션 
+                    @keyframes myani
+                        from or 0%{
+
+                        }   
+                        to or 30%{
+
+                        }
+                              100%{
+
+                        }  -> 두개만 설정할거면 from-to, 여러개면 %로.
+
+                    div{
+                        animation : myani 5s ease-in-out infnite;
+                    }
+
+                    opacity: 0;  -> 안보이게 만들어줌. 이거 많이 쓴데
+
+
+                4. Media Queries (반응형)
+                    @Media screen and (조건1) and (조건2) {
+                        div{
+                         background-color = black;
+                        }
+                    }
+
+                    max-width; min-width; 처럼 쓸 수도 있당
+                    (orientation: landscape) = 가로
+                    (orientation: portrait) = 세로
+
+                    @media print 출력물을 설정 가능
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            </div>
+        </main>
+
+        <footer>
+            &copy; 니꼬쌤 강의
+        </footer>
+    </body>
+</html>
