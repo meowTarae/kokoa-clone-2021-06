@@ -9,3 +9,14 @@
   color: white;
   font-weight: 600;
 }
+.no-badge {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  color: white;
+  background-color: white;
+  font-weight: 600;
+}

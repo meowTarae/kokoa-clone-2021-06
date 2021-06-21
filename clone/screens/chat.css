@@ -1,0 +1,144 @@
+#chat-screen {
+  background-color: #fdf4cc;
+  /* overflow-y: hidden; */
+  overflow-x: hidden;
+  height: 1100vh;
+}
+#chat-screen .status-bar,
+#chat-screen .alt-header {
+  position: fixed;
+  width: 100%;
+  box-sizing: border-box;
+  top: 0;
+  background-color: #fdf4cc;
+}
+#chat-screen .status-bar {
+  z-index: 2;
+}
+#chat-screen .alt-header {
+  top: 10px;
+  z-index: 1;
+}
+.alt-header__column span:last-child {
+  margin-left: 30px;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.main-chat {
+  margin-top: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  animation: fade-in 0.3s linear;
+}
+.chat__timestamp {
+  color: white;
+  font-size: 14px;
+  background-color: #92a4b2;
+  opacity: 0.5;
+  padding: 8px 15px;
+  border-radius: 25px;
+}
+
+.message-row {
+  margin-top: 20px;
+  width: 100%;
+  display: flex;
+  margin-bottom: 25px;
+  padding-left: 10px;
+}
+.message-row img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+.message-author {
+  opacity: 0.8;
+  font-size: 15px;
+  display: block;
+  margin: 4px 0 5px 0;
+}
+.message-info {
+  display: flex;
+  align-items: flex-end;
+}
+.message-bubble {
+  background-color: white;
+  padding: 16px 13px;
+  border-radius: 15px;
+  border-top-left-radius: 0px;
+  margin-right: 5px;
+  font-size: 18px;
+}
+.message-time {
+  opacity: 0.8;
+  font-size: 12px;
+}
+.message-row--own {
+  justify-content: flex-end;
+}
+.message-row--own .message-bubble {
+  background-color: yellow;
+  border-radius: 15px;
+  border-top-right-radius: 0px;
+  margin-right: 20px;
+  margin-left: 5px;
+}
+.message-row--own .message-info {
+  flex-direction: row-reverse;
+}
+.keyboard {
+  position: fixed;
+  bottom: 0%;
+  width: 100%;
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
+  padding: 5px 25px;
+  box-sizing: border-box;
+  align-items: center;
+}
+.keyboard .keyboard__column:first-child {
+  width: 10%;
+}
+.keyboard .keyboard__column:last-child {
+  width: 90%;
+  position: relative;
+}
+
+.keyboard i:not(button i) {
+  opacity: 0.5;
+}
+.keyboard input {
+  height: 30px;
+  width: 100%;
+  border: var(--main-border);
+  border-radius: 20px;
+  padding-left: 12px;
+}
+.keyboard__column:last-child > i,
+.keyboard__column:last-child button {
+  position: absolute;
+  right: 5px;
+  top: 4.5px;
+}
+.keyboard__column:last-child i {
+  right: 40px;
+  top: 9px;
+}
+.keyboard__column button {
+  background-color: var(--kokoacolor);
+  border: none;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+}

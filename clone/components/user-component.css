@@ -1,5 +1,6 @@
 .user-component {
   justify-content: space-between;
+  margin-bottom: 25px;
 }
 .user-component,
 .user-component__column {
@@ -22,7 +23,7 @@
   font-size: 22px;
 }
 .user-component__subtitle {
-  margin-top: 7px;
+  margin: 7px 0 0 2px;
   font-size: 17px;
   color: rgba(0, 0, 0, 0.5);
 }
@@ -43,4 +44,17 @@
 .user-component__time {
   margin-bottom: 8px;
   display: block;
+}
+.user-component__Exclamation-mark {
+  color: tomato;
+  height: 15px;
+  width: 15px;
+  border: 2px solid tomato;
+  border-radius: 50%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  margin: 29px 0 0 5px;
 }

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="kr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="short icon" href="tarae.jpg" />
+    <title>Chat w/ Tarae- Kokoa Talk !</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body id="chat-screen">
+    <div class="status-bar">
+      <div class="status-bar__column">
+        <span>No Service</span>
+        <!-- WIFI Icon -->
+        <i class="fas fa-wifi"></i>
+      </div>
+      <div class="status-bar__column exam">
+        <span>18:43</span>
+      </div>
+      <div class="status-bar__column">
+        <span>80%</span>
+        <!-- Battery Icon -->
+        <i class="fas fa-battery-three-quarters"></i>
+        <!-- Lightning Icon -->
+        <i class="fas fa-bolt"></i>
+      </div>
+    </div>
+
+    <header class="alt-header">
+      <div class="alt-header__column">
+        <a href="chats.html">
+          <i class="fas fa-chevron-left fa-2x"></i>
+        </a>
+      </div>
+
+      <div class="alt-header__column">
+        <h1 class="alt-header__title">Tarae</h1>
+      </div>
+
+      <div class="alt-header__column">
+        <span> <i class="fas fa-search fa-2x"></i></span>
+        <span><i class="fas fa-bars fa-2x"></i></span>
+      </div>
+    </header>
+
+    <main class="main-screen main-chat">
+      <div class="chat__timestamp">Monday, June 30, 2021</div>
+
+      <div class="message-row">
+        <img
+          src="C:\Users\배건호\Documents\GitHub\kokoa-clone-2021-06\clone\tarae.jpg"
+          alt=""
+        />
+        <div class="message-row__content">
+          <span class="message-author">Tarae</span>
+          <div class="message-info">
+            <span class="message-bubble">Hi</span>
+            <span class="message-time">21:27</span>
+          </div>
+        </div>
+      </div>
+      <div class="message-row message-row--own">
+        <div class="message-row__content">
+          <div class="message-info">
+            <span class="message-bubble">Hi</span>
+            <span class="message-time">21:27</span>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <form class="keyboard">
+      <div class="keyboard__column">
+        <i class="far fa-plus-square fa-lg"></i>
+      </div>
+      <div class="keyboard__column">
+        <input type="text" placeholder="Input Message..." />
+        <i class="far fa-grin-squint fa-lg"></i>
+        <button>
+          <i class="fas fa-arrow-circle-up"></i>
+        </button>
+      </div>
+    </form>
+
+    <script
+      src="https://kit.fontawesome.com/6478f529f2.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

@@ -1,3 +1,17 @@
+body {
+  box-sizing: content-box;
+  position: relative;
+  overflow-x: hidden;
+}
+.background-img {
+  position: absolute;
+  box-sizing: border-box;
+  width: 150vw;
+  height: 100vh;
+  opacity: 0.2;
+  z-index: -10;
+  padding-top: 30px;
+}
 .screen-header__under-bar {
   display: block;
   text-align: center;
@@ -27,4 +41,27 @@
   display: flex;
   justify-content: space-between;
   color: rgba(0, 0, 0, 0.5);
+}
+
+@keyframes hide-splash-screen {
+  95% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+#splash-screen {
+  background-color: var(--kokoacolor);
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 122px;
+  animation: hide-splash-screen 1s ease-in-out forwards;
 }

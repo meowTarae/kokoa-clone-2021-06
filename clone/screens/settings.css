@@ -1,0 +1,28 @@
+.settings__setting {
+  padding: 20px 0;
+  border-bottom: rgba(0, 0, 0, 0.1);
+  font-size: 23px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+.settings__setting i {
+  margin-right: 20px;
+  font-size: 22px;
+  opacity: 0.7;
+}
+.settings__setting-column:last-child {
+  opacity: 0.5;
+}
+#divide-line {
+  margin-left: -100%;
+  width: 300vw;
+  height: 2px;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+.settings__setting-column-badge {
+  position: absolute;
+  left: 130px;
+  font-size: 12px;
+}
