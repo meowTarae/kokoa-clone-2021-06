@@ -23,22 +23,13 @@
   margin-left: 30px;
 }
 
-@keyframes fade-in {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
 .main-chat {
   margin-top: 100px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  animation: fade-in 0.3s linear;
 }
+
 .chat__timestamp {
   color: white;
   font-size: 14px;
@@ -106,6 +97,7 @@
   padding: 5px 25px;
   box-sizing: border-box;
   align-items: center;
+  transition: all 0.3s ease-in-out;
 }
 .keyboard .keyboard__column:first-child {
   width: 10%;
@@ -124,6 +116,7 @@
   border: var(--main-border);
   border-radius: 20px;
   padding-left: 12px;
+  transition: all 0.3s ease-in-out;
 }
 .keyboard__column:last-child > i,
 .keyboard__column:last-child button {
@@ -141,4 +134,68 @@
   width: 25px;
   height: 25px;
   border-radius: 50%;
+}
+
+@keyframes Timestamp-fade-in {
+  from {
+    transform: translateY(-30px);
+    opacity: 0;
+  }
+  to {
+    transform: none;
+    opacity: 1;
+  }
+}
+@keyframes Tarae-fade-in {
+  from {
+    transform: translateX(-30px);
+    opacity: 0;
+  }
+  to {
+    transform: none;
+    opacity: 1;
+  }
+}
+@keyframes Me-fade-in {
+  from {
+    transform: translateX(30px);
+    opacity: 0;
+  }
+  to {
+    transform: none;
+    opacity: 1;
+  }
+}
+
+.main-chat:not(.message-row) {
+  animation: Timestamp-fade-in 1s linear;
+}
+.message-row {
+  opacity: 0;
+  animation: Tarae-fade-in 0.6s linear forwards;
+  animation-delay: 1.5s;
+}
+.message-row--own {
+  opacity: 0;
+  animation: Me-fade-in 0.6s linear forwards;
+  animation-delay: 2.5s;
+}
+
+.keyboard .keyboard__column:first-child,
+.keyboard .fa-grin-squint,
+.keyboard button {
+  transition: opacity 0.3s ease-in-out;
+}
+
+.keyboard:focus-within .keyboard__column:first-child,
+.keyboard:focus-within .fa-grin-squint,
+.keyboard:focus-within button {
+  opacity: 0;
+}
+.keyboard:focus-within input {
+  width: 98vw;
+  transform: translateX(-15%) translateY(-80px);
+}
+.keyboard:focus-within {
+  transform: translateY(80px);
 }
